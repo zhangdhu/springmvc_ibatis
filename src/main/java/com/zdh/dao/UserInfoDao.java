@@ -1,7 +1,12 @@
 package com.zdh.dao;
 
+import com.zdh.model.UserInfo;
+
 /**
- * Created by zhangdh-a on 15-8-6.
+ * @description TODO
+ * @author zhangdh-a
+ * @created 15-8-6.
  */
 public interface UserInfoDao {
+
 }

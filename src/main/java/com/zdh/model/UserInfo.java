@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by zhangdh-a on 15-8-6.
  */
 public class UserInfo implements Serializable {
+
     private Integer userId;
     private String userName;
     private Integer age;

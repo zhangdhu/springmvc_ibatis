@@ -2,16 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
 <mapper namespace="com.zdh.dao.UserInfoDao" >
 
-  <resultMap id="BaseResultMap" type="com.zdh.model.UserInfo" >
-    <id column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="user_name" property="userName" jdbcType="VARCHAR" />
-    <result column="age" property="age" jdbcType="INTEGER" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.zdh.model.UserInfo" >
+        <id column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+    </resultMap>
 
-  <sql id="Base_Column_List" >
-      u.user_id,
-      u.user_name,
-      u.age
-  </sql>
+    <sql id="Base_Column_List" >
+        u.user_id,
+        u.user_name,
+        u.age
+    </sql>
+
+    <insert id="insert" parameterType="com.zdh.model.UserInfo" >
+        insert into user_info (user_name, age)
+        values (#{userName,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})
+    </insert>
 
 </mapper>
