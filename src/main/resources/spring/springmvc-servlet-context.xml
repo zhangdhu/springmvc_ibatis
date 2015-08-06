@@ -30,18 +30,15 @@
     
 	<mvc:annotation-driven />
     <mvc:default-servlet-handler />
-    <context:component-scan base-package="com.glodon.*"/>
+    <context:component-scan base-package="com.zdh.*"/>
   	<mvc:resources mapping="/static/**" location="/static/" />
-  
-   
-  
-	<context:component-scan base-package="com.glodon.sglw.server.*" >
+
+	<context:component-scan base-package="com.zdh.*" >
         <context:exclude-filter type="annotation"
             expression="org.springframework.stereotype.Service" />
     </context:component-scan>
-	<!--<resources mapping="/resources/**" location="/resources/" />-->
-    <!--<resources mapping="/opt/**" location="/WEB-INF/opt/" />-->
-	<beans:bean id="viewResolver" 
+
+	<beans:bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 
 		<beans:property name="prefix" value="/WEB-INF/pages/" />
