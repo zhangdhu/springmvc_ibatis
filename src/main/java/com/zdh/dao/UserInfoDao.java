@@ -8,5 +8,5 @@ import com.zdh.model.UserInfo;
  * @created 15-8-6.
  */
 public interface UserInfoDao {
-
+    int insert(UserInfo userInfo);
 }
